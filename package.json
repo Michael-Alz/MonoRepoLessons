@@ -1,0 +1,19 @@
+{
+  "name": "lessons",
+  "version": "1.0.0",
+  "description": "Course lessons with calculator and todo applications",
+  "scripts": {
+    "calculator": "cd source/lessons/lesson-02 && npm run dev",
+    "todo": "cd source/lessons/lesson-02 && npm run todo",
+    "install-lesson-02": "cd source/lessons/lesson-02 && npm install",
+    "test-calculator": "cd source/lessons/lesson-02 && npm test",
+    "test-todo": "cd source/lessons/lesson-02 && npm run test:todo",
+    "coverage-calculator": "cd source/lessons/lesson-02 && npm run test:coverage",
+    "coverage-todo": "cd source/lessons/lesson-02 && npm run test:todo:coverage"
+  },
+  "keywords": ["lessons", "calculator", "todo", "typescript", "blessed"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {}
+}
