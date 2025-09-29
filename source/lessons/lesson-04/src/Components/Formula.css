@@ -1,0 +1,47 @@
+/** 
+  * Formula component styles
+  * @module src/Components/Formula.css
+  * text is right-aligned
+  * background color is black
+  * border color is dark gray
+  * text color is monitor green
+  * font size is 20px
+  * font is bold
+  * font is courier
+  */
+.formula {
+  background-color: #000000;
+  border: 5px solid #121412;
+  color: #039703;
+  padding: 5px 32px;
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+  font-family: courier;
+  font-size: 20px;
+  font-weight: bold;
+  width: 250px;
+  height: 20px;
+}
+
+.result {
+  background-color: #000000;
+  border: 5px solid #121412;
+  color: #039703;
+  padding: 5px 32px;
+  text-align: right;
+  text-decoration: none;
+  display: inline-block;
+  font-family: courier;
+  font-size: 20px;
+  font-weight: bold;
+  width: 250px;
+  height: 20px;
+}
+
+.formula-title {
+  font-family: helvetica;
+  font-size: 18px;
+  font-weight: bold;
+  color: #f3f7f3;
+}
