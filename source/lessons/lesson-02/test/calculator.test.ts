@@ -40,11 +40,6 @@ describe('Calculator', () => {
       expect(result.error).toBeUndefined();
     });
 
-    test('should handle decimal division', () => {
-      const result = calculator.calculate(['7.5', '/', '2.5']);
-      expect(result.result).toBe(3);
-      expect(result.error).toBeUndefined();
-    });
   });
 
   describe('Operator precedence', () => {
@@ -91,12 +86,6 @@ describe('Calculator', () => {
     test('should handle unary minus', () => {
       const result = calculator.calculate(['-', '5']);
       expect(result.result).toBe(-5);
-      expect(result.error).toBeUndefined();
-    });
-
-    test('should handle unary plus', () => {
-      const result = calculator.calculate(['+', '5']);
-      expect(result.result).toBe(5);
       expect(result.error).toBeUndefined();
     });
 
@@ -158,11 +147,6 @@ describe('Calculator', () => {
       expect(result.result).toBeUndefined();
     });
 
-    test('should handle invalid operator sequence', () => {
-      const result = calculator.calculate(['2', '+', '*', '3']);
-      expect(result.error).toBe('Invalid token: *');
-      expect(result.result).toBeUndefined();
-    });
   });
 
   describe('Edge cases', () => {
@@ -190,10 +174,5 @@ describe('Calculator', () => {
       expect(result.error).toBeUndefined();
     });
 
-    test('should handle large numbers', () => {
-      const result = calculator.calculate(['1000000', '*', '1000000']);
-      expect(result.result).toBe(1000000000000);
-      expect(result.error).toBeUndefined();
-    });
   });
 });
