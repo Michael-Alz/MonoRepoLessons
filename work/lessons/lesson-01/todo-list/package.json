@@ -1,0 +1,41 @@
+{
+  "name": "todo-cli",
+  "version": "0.1.0",
+  "description": "A multi-panel terminal to-do manager built with blessed + TypeScript",
+  "type": "module",
+  "bin": {
+    "todo": "./dist/cli/index.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "tsx src/cli/index.ts",
+    "build": "tsc",
+    "start": "node dist/cli/index.js",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "lint": "eslint src --ext .ts",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "kleur": "^4.1.5",
+    "uuid": "^9.0.1",
+    "ajv": "^8.12.0",
+    "chokidar": "^3.5.3"
+  },
+  "devDependencies": {
+    "@types/blessed": "^0.1.21",
+    "@types/node": "^20.0.0",
+    "@types/uuid": "^9.0.7",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  }
+}

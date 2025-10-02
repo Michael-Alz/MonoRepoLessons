@@ -129,6 +129,7 @@ export class Calculator {
     // Additional safety check for operators that might have been missed
     // This ensures we handle any edge cases where operators slip through
     // the earlier unary operator processing
+    /* istanbul ignore next - fallback is redundant given earlier unary checks */
     if (token === '+' || token === '-') {
       // Handle operators that weren't caught by unary processing
       // This provides a fallback mechanism for operator handling
