@@ -4,11 +4,10 @@
 ## Assignment: Implement a RESTful API in Multiple Languages (in addition to typescript and python)
 
 ## Class exercise
-we will implement the server in rust so you in class so you can experience the process.   This, unfortunately, means that you cannot choose rust as one of your languages for this assignment.
+We will implement a server example in class so you can experience the process.
 
 ### Languages That Cannot Be Used
 The following languages are **not allowed** for this assignment:
-- **Rust** (we will implement this together in class)
 - **Javascript**
 - **Python** (already provided)
 - **Typescript** (already provided)
@@ -94,7 +93,11 @@ The test suite implements the following sequence of operations to verify the ser
 You are allowed to use ChatGPT or any other generative AI tools to help generate code for this assignment. Make sure you understand the code and can explain how it works.  In fact, the purpose of this assigment is for you to develop skills in using generativeAI tools to build software.  You are encouraged to use these tools to help you complete the assignment.
 
 ### Assignment Requirements
-Your task is to implement at least two additional servers that provide the same RESTful functionality. Each server should be placed under `src/servers/<language-server>/`. You may choose any programming languages you are comfortable with (e.g., C#, Ruby, Go, etc.).
+**IMPORTANT: Each team member must implement ONE server in ONE language.**
+
+Your task is to implement one server that provides the same RESTful functionality. Each server should be placed under `src/servers/<language-server>/`. You may choose any programming language you are comfortable with (e.g., C#, Ruby, Go, etc.).
+
+For a team of 3 people, this means the team will have **3 new servers total** (1 per person), plus the TypeScript and Python servers already provided.
 
 For each server:
 - **Directory Structure**: Place each server in a separate directory under `src/servers/`. For example, `src/servers/erlang-server/` or `src/servers/csharp-server/`.
@@ -102,7 +105,10 @@ For each server:
 - **Port Configuration**: Set each new server to run on a different port locally (e.g., 5003, 5004) to avoid conflicts.
 - **README.md**: Include a `README.md` file in each server directory explaining how to set up and run the server. This README should provide:
   - A step-by-step guide to set up the server from scratch
-  - Installation requirements (including version numbers)
+  - Installation requirements (including version numbers):
+    - For Node.js projects, specify Node and npm versions (use `node --version` and `npm --version` to check)
+    - For language-specific tools, document the version used (e.g., Python 3.11, Go 1.21, etc.)
+    - Include any framework or library versions that are critical
   - Commands to start the server
   - Any additional setup instructions
   - Platform testing information:
@@ -115,7 +121,7 @@ For each server:
 ### Team Member Requirements
 Each team member is expected to complete the following:
 
-1. **Language Selection**: Each team member must pick a language they have not implemented in before.
+1. **Language Selection**: Each team member must pick **ONE language** they have not implemented in before. You will implement one server in this language.
 
 2. **Development Plan**: Before starting implementation, each team member must create a `development-plan.md` document in their language server directory (e.g., `src/servers/go-server/development-plan.md`). We will create an example of this document in class. This plan should outline:
    - The approach to implementing the server
@@ -141,18 +147,18 @@ Each team member is expected to complete the following:
 5. **Individual Submission**: Each team member must submit their server implementation to their own GitHub repository. 
 
 ### Grading Criteria
-- **Functionality**: Each of the two servers (The two additional servers) must pass the test suite outlined above.
+- **Functionality**: Your server must pass the test suite outlined above.
 - **Consistency**: Ensure that the endpoints and responses are consistent with the TypeScript and the Python servers
 - **Code Quality**: Ensure your code is clean, well-commented, and follows best practices for the chosen language.
-- **Documentation**: Provide clear instructions in the `README.md` for each server.
-- **Documentation**: Edit the `LESSONS_LEARNED.md` file that captures insights and observations from working with multiple languages.  This is optional, but you might find it useful in the future when you look back on this project.
+- **Documentation**: Provide clear instructions in the `README.md` for your server.
+- **Documentation**: Edit the `LESSONS_LEARNED.md` file that captures insights and observations from working with multiple languages. This is optional, but you might find it useful in the future when you look back on this project.
 
 ### Grade Calculation
 This assignment is marked out of **n × 10 points**, where **n** is the number of people on the team.
 
 **Individual Scoring:**
-- Each team member gets **5 points** for each server they implement, up to a maximum of **10 points per person**
-- Therefore, each team member should implement at least 2 servers to achieve full marks
+- Each team member earns **10 points** for successfully implementing their server
+- Each team member implements exactly **1 server**
 
 **Canvas Grade:**
 - Your team's total score will be normalized to be out of **100** for the Canvas entry
@@ -171,7 +177,7 @@ This assignment is marked out of **n × 10 points**, where **n** is the number o
 - Apart from making the changes in the tester where you find `CHANGEME`, you should not need to make any changes to the tester
 
 **Bonus:**
-- Additional servers beyond the required 2 per person will make you happy and joyful (and demonstrate mastery!).
+- Additional servers beyond the required 1 per person will make you happy and joyful (and demonstrate mastery!).
 
 ### Team Testing and Cross-Platform Verification
 Cross-platform testing is integrated into the code walk process:
@@ -189,14 +195,15 @@ Cross-platform testing is integrated into the code walk process:
 - The team repository should contain:
   - **src/servers/ts-server/** (TypeScript server already provided)
   - **src/servers/python-server/** (Python server already provided)
-  - **src/servers/<language1-server>/** (First additional server)
-  - **src/servers/<language2-server>/** (Second additional server)
+  - **All team member servers** (1 server per team member)
+    - For example, a 3-person team will have 3 new language servers
+    - Each in its own directory: `src/servers/<language-server>/`
   - Updated tester with your chosen languages
 
 #### Individual Repository
 - Each team member must also submit their server implementation to their own GitHub repository.
 - Your individual repository should include:
-  - Your server implementation
+  - Your server implementation code
   - `development-plan.md`
   - `tracking-document.md` (including code walk information)
   - `README.md` with setup instructions
@@ -209,7 +216,7 @@ Cross-platform testing is integrated into the code walk process:
 
 1. **Understand the Specification**: Start by reading both the TypeScript and the Python server code to understand how the server works. Review the `ROUTES.md` file carefully.
 
-2. **Choose Your Language**: Pick a language you have not implemented in before from the allowed options.
+2. **Choose Your Language**: Pick **ONE language** you have not implemented in before from the allowed options. You will implement one server in this language.
 
 3. **Create Development Plan**: Before coding, create a `development-plan.md` document in your server directory. Use the example we create in class as a guide. This helps you think through the implementation before jumping into code.
 
@@ -238,6 +245,47 @@ Cross-platform testing is integrated into the code walk process:
    - If you get stuck, reach out to your team members or the instructor for help
    - Learn from each other's implementations
 
-9. **Go Beyond**: If you get your language done quickly and all team requirements are met, consider adding an additional language to the project for extra learning (and joy!).
+9. **Go Beyond**: If you get your language done quickly and all team requirements are met, consider adding a second language to the project for extra learning (and joy!).
 
 Good luck, and feel free to reach out if you have any questions!
+
+---
+
+## Appendix: Suggested Languages with REST and CORS Support
+
+Below is a comprehensive list of programming languages and frameworks with REST and CORS support that you can choose from for this assignment (alphabetically sorted):
+
+- **C**: libmicrohttpd, CivetWeb
+- **C++**: Crow, Drogon, Pistache, Oat++, cpp-httplib, Boost.Beast
+- **C#/.NET**: ASP.NET Core with built-in REST and CORS support
+- **Clojure**: Ring with Compojure, ring-cors
+- **Common Lisp**: Hunchentoot, Clack
+- **Crystal**: Kemal, Lucky
+- **D**: Vibe.d with REST interface and CORS support
+- **Dart**: Shelf with shelf_cors
+- **Elixir**: Phoenix framework with CORS plug-ins
+- **Erlang**: Cowboy
+- **F#**: Giraffe, Saturn
+- **Go**: Gin, Echo, Gorilla Mux with CORS middleware
+- **Haskell**: Scotty, Servant, Yesod
+- **Julia**: Genie.jl, HTTP.jl
+- **Kotlin**: Ktor, Spring Boot
+- **Lua**: Lapis with OpenResty
+- **Nim**: Jester
+- **Node.js**: Koa, NestJS with cors package
+- **OCaml**: Dream, Opium
+- **Perl**: Dancer2, Mojolicious
+- **PHP**: Laravel, Symfony with CORS packages
+- **Python**: FastAPI with CORS middleware
+- **Racket**: Built-in web-server library
+- **Ruby**: Ruby on Rails, Sinatra with rack-cors gem
+- **Rust**: Actix-web, Rocket, Axum with CORS middleware
+- **Scala**: Play Framework, Akka HTTP, http4s
+- **Swift**: Vapor, Kitura
+- **Zig**: httpz, zap
+
+**Remember**: The following languages are **NOT allowed** for this assignment:
+- Javascript
+- Python (already provided)
+- Typescript (already provided)
+- Java
