@@ -200,3 +200,8 @@ This will help you understand the difference between promise chaining and async/
 This project demonstrates the use of `Promises` and `async/await` in TypeScript to handle asynchronous operations in a terminal-based application. By using `Promise.allSettled`, we can wait for all promises to complete before determining the overall results, while still providing real-time feedback through callback functions.
 
 
+
+
+
+
+
